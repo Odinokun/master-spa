@@ -1,0 +1,263 @@
+.top {
+  display: flex;
+
+  @include max(840) {
+    flex-direction: column;
+  }
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  min-height: 1000px;
+  padding: 180px 30px 20px 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+
+  @include max(840) {
+    width: 100%;
+  }
+  @include max(570) {
+    min-height: 340px;
+  }
+}
+
+.top-section--left {
+  background-image: url('../img/bg-top-left.jpg');
+
+  @include max(570) {
+    padding-top: 110px;
+  }
+}
+
+.top-section--right {
+  background-image: url('../img/bg-top-right.jpg');
+
+  @include max(840) {
+    padding-top: 55px;
+  }
+  @include max(570) {
+    padding-top: 90px;
+  }
+}
+
+.top-section__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 65px;
+
+  @include max(570) {
+    margin-bottom: 30px;
+  }
+}
+
+.top-section__logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  min-height: 105px;
+  margin-right: 50px;
+
+  @include max(1111) {
+    margin-right: 25px;
+  }
+  @include max(840) {
+    margin-right: 0;
+  }
+  @include max(570) {
+    max-width: 205px;
+    min-height: 0;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    width: 1px;
+    height: 85px;
+    margin: auto;
+    content: '';
+    background-color: #919398;
+
+    @include max(1111) {
+      right: -25px;
+    }
+    @include max(840) {
+      display: none;
+    }
+  }
+}
+
+.top-section__header-text {
+  font-family: $font;
+  font-size: 20px;
+  padding-left: 40px;
+  white-space: nowrap;
+  color: #fff;
+
+  @include max(1111) {
+    padding-left: 25px;
+  }
+  @include max(840) {
+    display: none;
+  }
+}
+
+.top-section__subtitle {
+  font-family: $font-semibold;
+  font-size: 24px;
+  line-height: 36px;
+  max-width: 510px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #fff;
+
+  @include max(570) {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 300px;
+  }
+}
+
+.top-section__description {
+  position: relative;
+  max-width: 550px;
+  min-height: 245px;
+  margin-bottom: 40px;
+
+  @include max(570) {
+    display: none;
+  }
+}
+
+.top-section__description-btn {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 165px;
+  margin: auto;
+  cursor: pointer;
+  transition: opacity .5s;
+  &:hover {
+    span::before {
+      width: 100%;
+    }
+  }
+  &.hide {
+    opacity: 0;
+  }
+  span {
+    font-family: $font-bold;
+    font-size: 20px;
+    position: relative;
+    display: block;
+    color: #fff;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      margin: auto;
+      content: '';
+      transition: width .5s;
+      background-color: #fff;
+    }
+  }
+}
+
+.top-section__description-btn-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 54px;
+  height: 54px;
+  margin-right: 13px;
+  border-radius: 50%;
+  background-image: linear-gradient(180deg, #00aad4 0%, #1589a6 100%);
+  svg {
+    fill: #fff;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.top-section__description-text {
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
+  &.active {
+    opacity: 1;
+  }
+  p {
+    font-family: $font;
+    font-size: 19px;
+    line-height: 27px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.top-section__btn {
+  position: relative;
+  height: 64px;
+  padding: 20px 30px;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: #276674;
+
+  @include max(570) {
+    height: 55px;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    transition: transform .5s;
+    transform: translateY(-3px);
+    border-radius: 4px;
+    background-image: linear-gradient(180deg, #00aad4 0%, #1589a6 100%);
+  }
+  span {
+    font-family: $font-bold;
+    font-size: 20px;
+    line-height: 1.1;
+    position: relative;
+    display: block;
+    transition: transform .5s;
+    transform: translateY(-2px);
+    white-space: nowrap;
+    color: #fff;
+
+    @include max(570) {
+      font-size: 16px;
+    }
+  }
+  &:hover {
+    color: #fff;
+    span {
+      transform: translateY(3px);
+    }
+    &::before {
+      transform: translateY(3px);
+    }
+  }
+}

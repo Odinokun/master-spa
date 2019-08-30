@@ -1,4 +1,18 @@
 //begin footer
-footer.footer(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 footer
+footer.footer
+  .container
+    //begin footer-menu
+    nav.footer-menu
+      ul.footer-menu__list
+        li.footer-menu__item
+          a(href="#").footer-menu__link Datenschutz
+        li.footer-menu__item
+          a(href="#").footer-menu__link Haftungsausschluss
+        li.footer-menu__item
+          a(href="#").footer-menu__link Impressum
+        li.footer-menu__item
+          a(href="#").footer-menu__link AGB
+    //end footer-menu
+
+    include ../elements/phone-block
 //end footer

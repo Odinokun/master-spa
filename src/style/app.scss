@@ -5,16 +5,15 @@
 @import 'core/base';
 
 //elements
-// @import 'elements/breadcrumbs';
+@import "elements/phone-block";
 // @import 'elements/burger';
-// @import 'elements/pagination';
-//@import 'elements/popup';
-// @import 'elements/slickBase';
-// @import 'elements/stickyHeader';
 
 //section
 @import 'sections/footer';
 @import 'sections/header';
+@import 'sections/top-section';
+@import 'sections/second-section';
+@import 'sections/map-section';
 
 //pages
 @import 'pages/index';

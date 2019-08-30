@@ -1,4 +1,27 @@
-// begin header
-header.header(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 header
-// end header
+//begin header
+.header
+  .container
+    //begin logo
+    a(href="#").logo
+      +svg('logo')
+    //end logo
+
+    //begin header-menu
+    nav.header-menu
+      ul.header-menu__list
+        li.header-menu__item
+          a(href="#").header-menu__link Berlin
+        li.header-menu__item
+          a(href="#").header-menu__link Hamburg
+        li.header-menu__item
+          a(href="#").header-menu__link Essen
+        li.header-menu__item
+          a(href="#").header-menu__link Frankfurt
+        li.header-menu__item
+          a(href="#").header-menu__link Stuttgart
+        li.header-menu__item
+          a(href="#").header-menu__link München
+    //end header-menu
+
+    include ../elements/phone-block
+//end header

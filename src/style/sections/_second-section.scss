@@ -1,0 +1,49 @@
+.second-section {
+  background-image: url('../img/bg-second.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 760px;
+    text-align: center;
+  }
+}
+
+.second-section__title {
+  font-family: $font-heavy;
+  font-size: 50px;
+  line-height: 65px;
+  color: #fff;
+
+  @include max(840) {
+    font-size: 40px;
+    line-height: 55px;
+  }
+  @include max(570) {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+}
+
+.second-section__description {
+  p {
+    font-family: $font;
+    font-size: 21px;
+    line-height: 31px;
+    color: #fff;
+
+    @include max(840) {
+      font-size: 19px;
+      line-height: 26px;
+    }
+    @include max(570) {
+      font-size: 17px;
+      line-height: 22px;
+    }
+  }
+}
