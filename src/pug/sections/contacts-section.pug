@@ -1,0 +1,29 @@
+//begin contacts
+.contacts
+  .container
+    h2.contacts__title Kontaktanfrage
+    //begin contacts__form
+    .contacts__form
+      input(placeholder='Name, Vorname').contacts__input
+      input(placeholder='Firma').contacts__input
+      input(placeholder='Straße, Hausnummer').contacts__input
+      input(placeholder='Telefon').contacts__input
+      input(placeholder='PLZ, Ort').contacts__input
+      input(placeholder='E-mail').contacts__input
+      textarea(placeholder='Nachricht').contacts__textarea
+
+      .contacts__form-row
+        label.contacts__agree
+          input(type='checkbox')
+          span.contacts__agree-text
+            | Ich stimme der Erhebung, Verarbeitung und Nutzung meiner personenbezogenen
+            | Daten gemäß der
+            =' '
+            a(href="#" target='_blank') Datenschutzerklärung
+            =' '
+            |zu.
+
+        input(type='submit' value='Senden').contacts__submit
+
+    //end contacts__form
+//end contacts

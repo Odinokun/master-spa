@@ -88,22 +88,6 @@ ul {
   }
 }
 
-ul {
-  li {
-    // путь к кастомной картинке пункта ul
-    // list-style-image: url('../img/ul.png');
-  }
-}
-
-//кастомные пункты списка с цифрами
-ol {
-  // list-style: none;
-  // @include counter(li);
-  li::before {
-    // color: $brand;
-  }
-}
-
 input,
 textarea,
 select,
@@ -164,10 +148,6 @@ ol > *:not(li) {
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
-
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 
 .main {

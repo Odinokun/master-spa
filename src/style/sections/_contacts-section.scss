@@ -1,0 +1,153 @@
+.contacts {
+  padding: 85px 0 70px 0;
+  background-image: linear-gradient(180deg, #00aad4 0%, #1589a6 100%);
+}
+
+.contacts__title {
+  font-family: $font-heavy;
+  font-size: 44px;
+  line-height: 56px;
+  margin-bottom: 65px;
+  color: #fff;
+
+  @include max(840) {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+  @include max(570) {
+    font-size: 30px;
+  }
+}
+
+.contacts__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contacts__input,
+.contacts__textarea {
+  font-family: $font;
+  font-size: 16px;
+  padding: 20px 30px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+
+  @include placeholder-color(#fff);
+}
+
+.contacts__input {
+  width: calc(50% - 20px);
+  height: 60px;
+  margin-bottom: 40px;
+
+  @include max(767) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 50px;
+
+  @include max(767) {
+    margin-bottom: 30px;
+  }
+}
+
+.contacts__form-row {
+  display: flex;
+  width: 100%;
+
+  @include max(767) {
+    flex-direction: column;
+  }
+}
+
+.contacts__agree {
+  position: relative;
+  display: block;
+  max-width: 630px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+
+  @include max(767) {
+    padding-right: 0;
+  }
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+.contacts__agree-text {
+  font-family: $font;
+  font-size: 16px;
+  line-height: 1.2;
+  display: block;
+  padding-left: 40px;
+  color: #fff;
+  &::before {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '';
+    border: 1px solid #fff;
+  }
+  &::after {
+    position: absolute;
+    top: 15px;
+    left: 3px;
+    width: 13px;
+    height: 12px;
+    content: '';
+    opacity: 0;
+    background-image: url('../img/check.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  a {
+    text-decoration: underline;
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.contacts__agree input:checked + .contacts__agree-text::after {
+  opacity: 1;
+}
+
+.contacts__submit {
+  font-family: $font-bold;
+  font-size: 20px;
+  width: 100%;
+  max-width: 290px;
+  height: 60px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: .5s;
+  color: #05a3ca;
+  border: 2px solid #fff;
+  border-radius: 4px !important;
+  background-color: #fff;
+
+  @include max(767) {
+    margin-left: 0;
+  }
+  &:hover {
+    color: #fff;
+    background-color: transparent;
+  }
+}
