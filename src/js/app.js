@@ -6,5 +6,8 @@ $(function() {
   // begin top section description
   require('./modules/top-section')();
 
+  // begin scroll 2 ancor
+  require('./modules/scroll2ancor')();
+
 
 });

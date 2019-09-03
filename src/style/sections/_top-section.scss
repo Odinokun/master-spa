@@ -47,11 +47,12 @@
 .top-section__header {
   display: flex;
   align-items: center;
-  margin-bottom: 65px;
-
-  @include max(570) {
+  //margin-bottom: 65px;
     margin-bottom: 30px;
-  }
+
+  //@include max(570) {
+  //  margin-bottom: 30px;
+  //}
 }
 
 .top-section__logo {
@@ -117,7 +118,8 @@
   font-size: 24px;
   line-height: 36px;
   max-width: 510px;
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
   color: #fff;
 
@@ -131,7 +133,8 @@
 .top-section__description {
   position: relative;
   max-width: 550px;
-  min-height: 245px;
+  //min-height: 245px;
+  min-height: 385px;
   margin-bottom: 40px;
 
   @include max(570) {
