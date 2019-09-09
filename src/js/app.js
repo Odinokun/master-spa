@@ -9,5 +9,8 @@ $(function() {
   // begin scroll 2 ancor
   require('./modules/scroll2ancor')();
 
+  // begin footer links & tabs
+  require('./modules/footer-tabs')();
+
 
 });

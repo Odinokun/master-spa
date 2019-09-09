@@ -1,0 +1,38 @@
+.footer-tab {
+  display: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .twocol {
+    column-count: 2;
+    @include max(570) {
+      column-count: 1;
+    }
+  }
+}
+
+.tab-close {
+  display: block;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+  text-align: center;
+}
+
+.footer-tab--impressum{
+  h5 {
+    text-align: center;
+  }
+}
+.footer-tab__table{
+  margin: 20px auto 0;
+  max-width: 500px;
+}
+.footer-tab__row{
+  display: flex;
+  padding: 0 0 15px 0;
+}
+.footer-tab__item{
+  width: 50%;
+}
+.footer-tab__item--left{
+  font-weight: 700;
+}
