@@ -11,8 +11,8 @@
   flex-direction: column;
   align-items: center;
   width: 50%;
-  min-height: 1000px;
-  padding: 180px 30px 20px 30px;
+  min-height: 100vh;
+  padding: 150px 30px 50px 30px;
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -21,7 +21,7 @@
     width: 100%;
   }
   @include max(570) {
-    min-height: 340px;
+    //min-height: 340px;
   }
 }
 
@@ -47,12 +47,7 @@
 .top-section__header {
   display: flex;
   align-items: center;
-  //margin-bottom: 65px;
-    margin-bottom: 30px;
-
-  //@include max(570) {
-  //  margin-bottom: 30px;
-  //}
+  margin-bottom: 50px;
 }
 
 .top-section__logo {
@@ -118,8 +113,7 @@
   font-size: 24px;
   line-height: 36px;
   max-width: 510px;
-  //margin-bottom: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
   color: #fff;
 
@@ -132,9 +126,9 @@
 
 .top-section__description {
   position: relative;
+  width: 100%;
   max-width: 550px;
-  //min-height: 245px;
-  min-height: 385px;
+  min-height: 60px;
   margin-bottom: 40px;
 
   @include max(570) {
@@ -150,16 +144,12 @@
   display: flex;
   align-items: center;
   width: 165px;
-  margin: auto;
+  margin: 0 auto 50px;
   cursor: pointer;
-  transition: opacity .5s;
   &:hover {
     span::before {
       width: 100%;
     }
-  }
-  &.hide {
-    opacity: 0;
   }
   span {
     font-family: $font-bold;
@@ -200,12 +190,9 @@
 }
 
 .top-section__description-text {
+  display: none;
   transition: opacity .5s;
   pointer-events: none;
-  opacity: 0;
-  &.active {
-    opacity: 1;
-  }
   p {
     font-family: $font;
     font-size: 19px;
@@ -218,6 +205,7 @@
 .top-section__btn {
   position: relative;
   height: 64px;
+  margin-top: auto;
   padding: 20px 30px;
   text-decoration: none;
   border-radius: 4px;
